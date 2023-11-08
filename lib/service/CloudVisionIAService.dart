@@ -5,7 +5,7 @@ class CloudVisionIAService {
   Future<bool> isAnimalImageService(String imageUrl) async {
     final response = await http.post(
       Uri.parse(
-          'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDfXAIFT5CecRJ-ufU-jz73iDYegO9KkWc'),
+          'https://vision.googleapis.com/v1/images:annotate?key={you_key}'),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -48,8 +48,7 @@ class CloudVisionIAService {
 
   static Future getPredominantColor(String imageUrl) async {
     final response = await http.post(
-      Uri.parse(
-          'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDfXAIFT5CecRJ-ufU-jz73iDYegO9KkWc'),
+      Uri.parse('https://vision.googleapis.com/v1/images:annotate?key={you_key}'),
       headers: {
         'Content-Type': 'application/json',
       },
